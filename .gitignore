@@ -1,3 +1,5 @@
 /Maps
 AirSim-main
 airsim-1.8.1
+__pycache__
+.pyc
