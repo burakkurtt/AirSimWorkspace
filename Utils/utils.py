@@ -8,3 +8,7 @@ def save_images(image_dir, count, img):
 
     image_path = os.path.join(image_dir, f"image_{count:04d}.png")
     cv2.imwrite(image_path, img)
+
+def display(img):
+    cv2.imshow("Camera", img)
+    cv2.waitKey(1)

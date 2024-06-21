@@ -1,9 +1,9 @@
 from Library import AirSimWrapper
 from Utils import utils
+import Slam
 import threading
-import os
 import time
-import cv2
+
 
 quadClient = AirSimWrapper.AirSimWrapper()
 slamClient = AirSimWrapper.AirSimWrapper()
@@ -12,9 +12,9 @@ slamClient = AirSimWrapper.AirSimWrapper()
 # Slam Thread
 def slam():
     print("SLAM thread has been started.")
-
     while True:
         imgRGB = slamClient.get_image_front_camera()
+        Slam.image_process(imgRGB)
         time.sleep(0.1)
 
 def main():
